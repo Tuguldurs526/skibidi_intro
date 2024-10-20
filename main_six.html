@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Skibidi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">0
+  <style>
+    body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGozamtyZ2E0bWQ3Y2cyMncwcHVyYm5qY2YxNmNlYWJ6azFycGgwOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TxVVB6PfWMjE4/giphy.gif');
+    background-size: cover; /* Makes the background cover the entire page */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    padding: 0;
+    margin: 0;
+    min-height: 100vh; /* Makes sure the background image covers the whole height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 170px;
+    padding-bottom: 0;
+    align-items: center;
+}
+
+
+    h1 {
+      text-align: center;
+      font-size: 4rem;
+      color: #455ad1;
+      margin: 0 0 20px 0;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .hover-target {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    background-color: #ffffff;
+    color: #333;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    }
+    .hover-target {
+      cursor: url('https://i.ibb.co/qgGT6wT/Pngtree-hand-tap-touch-screen-gesture-6320233.png'), auto;
+    }
+
+
+    .hover-target:hover {
+    transform: scale(1.1) rotate(3deg); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 255, 255, 0.5); 
+    }
+
+    .popup {
+    visibility: hidden;
+    position: absolute;
+    top: 100%; 
+    left: 50%;
+    transform: translateX(-50%) translateY(0); 
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 200px;
+    z-index: 100;
+    transition: visibility 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    }
+
+    .hover-target:hover .popup {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0); 
+    }
+
+    .hover-target:hover .popup img {
+    transform: scale(1.1); /* Slight zoom effect */
+    }
+
+    .hover-target:active {
+    transform: scale(0.95); /* Simulate button press */
+    }
+
+
+    .popup img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .popup h3 {
+      font-size: 1.2rem;
+      margin: 10px 0 5px;
+    }
+
+    .popup p {
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+  </style>
+  <script src="https://unpkg.com/hyperscript.org@0.9.7"></script>
+</head>
+
+<body>
+
+  <h1>SKIBIDI TRIO</h1>
+
+  <div class="container">
+    <!-- Tuguldur's box -->
+    <div class="hover-target" _="on mouseenter set the next .popup's visibility to visible and opacity to 1
+                                 on mouseleave set the next .popup's visibility to hidden and opacity to 0">
+      Tuguldur
+      <div class="popup">
+        <img src="https://i.ibb.co/fvBZLKs/image-2024-10-17-225422832.png " alt="Tuguldur">
+        <h3>Tuguldur</h3>
+        <p>Hi, I am Tuguldur Sakhiya with student ID number 411855728,a Mongolian who enjoys to help others!</p>
+      </div>
+    </div>
+
+    <!-- Tuyana's box -->
+    <div class="hover-target" _="on mouseenter set the next .popup's visibility to visible and opacity to 1
+                                 on mouseleave set the next .popup's visibility to hidden and opacity to 0">
+      Tuyana
+      <div class="popup">
+        <img src="https://i.ibb.co/q5KQdmt/image-2024-10-18-121745945.png" alt="Tuyana">
+        <h3>Tuyana</h3>
+        <p>Hi, I am Tuyana! My student ID = 411855322. Nice to meet you :)</p>
+      </div>
+    </div>
+
+    <!-- Tyeis's box -->
+    <div class="hover-target" _="on mouseenter set the next .popup's visibility to visible and opacity to 1
+                                 on mouseleave set the next .popup's visibility to hidden and opacity to 0">
+      Tyeis
+      <div class="popup">
+        <img src="https://i.ibb.co/3fHK37M/image-2024-10-18-121427523.png" alt="Tyeis">
+        <h3>Tyeis</h3>
+        <p>Hi, I am Tyeis!</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
