@@ -14,19 +14,21 @@
     background-repeat: no-repeat; /* Prevents the background image from repeating */
     padding: 0;
     margin: 0;
-    height: 100vh; /* Makes sure the background image covers the whole height */
+    min-height: 100vh; /* Makes sure the background image covers the whole height */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 170px;
+    padding-bottom: 0;
     align-items: center;
 }
 
 
     h1 {
       text-align: center;
-      font-size: 3rem;
+      font-size: 4rem;
       color: #455ad1;
-      margin-bottom: 50px;
+      margin: 0 0 20px 0;
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     }
 
@@ -58,16 +60,16 @@
 
 
     .hover-target:hover {
-    transform: scale(1.1) rotate(3deg); /* 3D hover effect */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 255, 255, 0.5); /* Glow effect */
+    transform: scale(1.1) rotate(3deg); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 255, 255, 0.5); 
     }
 
     .popup {
     visibility: hidden;
     position: absolute;
-    top: 160px;
+    top: 100%; 
     left: 50%;
-    transform: translateX(-50%) translateY(10px); /* Add slight offset for sliding effect */
+    transform: translateX(-50%) translateY(0); 
     background-color: #fff;
     padding: 15px;
     border-radius: 8px;
@@ -81,7 +83,7 @@
     .hover-target:hover .popup {
     visibility: visible;
     opacity: 1;
-    transform: translateX(-50%) translateY(0); /* Slide effect back to normal */
+    transform: translateX(-50%) translateY(0); 
     }
 
     .hover-target:hover .popup img {
@@ -136,7 +138,7 @@
       <div class="popup">
         <img src="https://i.ibb.co/q5KQdmt/image-2024-10-18-121745945.png" alt="Tuyana">
         <h3>Tuyana</h3>
-        <p>Hi, I am Tuyana!</p>
+        <p>Hi, I am Tuyana! My student ID = 411855322. Nice to meet you :)</p>
       </div>
     </div>
 
